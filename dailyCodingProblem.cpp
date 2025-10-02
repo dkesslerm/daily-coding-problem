@@ -1,3 +1,4 @@
+#include <cstdint>
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -12,7 +13,6 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 
 class Solution {
 public:
@@ -168,9 +168,50 @@ public:
             return b;
         });
     }
+};
 
+// Daily Coding Problem: Problem #6 [Hard] - 1/10/25
 
+struct Node {
+    int data;
+    Node* both; // XOR of prev and next nodes
+};
 
+class XORList {
+private:
+    Node* head = nullptr;
+    Node* tail = nullptr;
+
+    Node* XOR(Node* a, Node* b) {
+        return (Node*)((uintptr_t)a ^ (uintptr_t)b);
+    }
+public:
+    void add(int data) { // add at the end of the list
+        Node* newNode = new Node();
+        newNode->data = data;
+        newNode->both = tail;
+
+        if (tail) {
+            tail->both = XOR(XOR(tail->both, nullptr), newNode);
+        } else {
+            head = newNode;
+        }
+
+        tail = newNode;
+    }
+
+    Node* get(int index) {
+        Node* current = head;
+        Node* prev = nullptr;
+        int i = 0;
+        while (current && i < index) {
+            Node* next = XOR(prev, current->both);
+            prev = current;
+            current = next;
+            i++;
+        }
+        return current;
+    }
 };
 
 int main() {
@@ -190,7 +231,7 @@ int main() {
         //     cout << i << ", ";
         // }
 
-    // Daily Coding Problem: Problem #3 [Medium] - 28/9/25
+    // Daily Coding Problem: Problem #3 [Medium] - 28/9/25int index
         // Try it in Leetcode 297!
 
     // Daily Coding Problem: Problem #4 [Hard] - 29/9/25 - Leetcode 41
@@ -198,9 +239,24 @@ int main() {
         // cout << s.firstMissingPositive(nums) << endl;
 
     // Daily Coding Problem: Problem #5 [Medium] - 30/9/25
-        auto pair = s.cons(1, "puerta");
-        cout << "First element: " << s.car(pair) << endl;
-        cout << "Second element: " << s.cdr(pair) << endl;
+        // auto pair = s.cons(1, "puerta");
+        // cout << "First element: " << s.car(pair) << endl;
+        // cout << "Second element: " << s.cdr(pair) << endl;
+
+    // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
+        XORList list;
+        list.add(3);
+        list.add(1);
+        list.add(8);
+
+        Node* node = new Node();
+        int index = 0;
+        node = list.get(index);
+        if (node) {
+            cout << "The node at " << index << " has a value of " << node->data << endl;
+        } else {
+            cout << "The node at " << index << " is null!" << endl;
+        }
 
     return 0;
 }
