@@ -1,3 +1,4 @@
+#include <cctype>
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -168,6 +169,28 @@ public:
             return b;
         });
     }
+
+    // Daily Coding Problem: Problem #7 [Medium] - 2/10/25
+    int numDecodings(string message) {
+        int n = message.length();
+        if (n == 0) return 0;
+
+        vector<int> dp(n + 1, 0);
+        dp[0] = 1;
+        dp[1] = (message[0] != '0');
+
+        for (int i = 2; i <= n; i++) {
+            if (message[i - 1] != '0') {
+                dp[i] += dp[i - 1];
+            }
+            if (message[i - 1] < '7' && (message[i - 2] == '1' || message[i - 2] == '2')) {
+                dp[i] += dp[i - 2];
+            }
+        }
+
+        return dp[n];
+    }
+
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -244,19 +267,24 @@ int main() {
         // cout << "Second element: " << s.cdr(pair) << endl;
 
     // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
-        XORList list;
-        list.add(3);
-        list.add(1);
-        list.add(8);
+        // XORList list;
+        // list.add(3);
+        // list.add(1);
+        // list.add(8);
 
-        Node* node = new Node();
-        int index = 0;
-        node = list.get(index);
-        if (node) {
-            cout << "The node at " << index << " has a value of " << node->data << endl;
-        } else {
-            cout << "The node at " << index << " is null!" << endl;
-        }
+        // Node* node = new Node();
+        // int index = 0;
+        // node = list.get(index);
+        // if (node) {
+        //     cout << "The node at " << index << " has a value of " << node->data << endl;
+        // } else {
+        //     cout << "The node at " << index << " is null!" << endl;
+        // }
+
+    // Daily Coding Problem: Problem #7 [Medium] - 2/10/25
+    cout << s.numDecodings("101") << endl;
+    cout << s.numDecodings("110") << endl;
+
 
     return 0;
 }
