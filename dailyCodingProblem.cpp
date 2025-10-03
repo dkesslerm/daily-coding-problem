@@ -174,21 +174,25 @@ public:
     int numDecodings(string message) {
         int n = message.length();
         if (n == 0) return 0;
-
-        vector<int> dp(n + 1, 0);
-        dp[0] = 1;
-        dp[1] = (message[0] != '0');
+        int befprev = 1;
+        int prev = (message[0] != '0');
 
         for (int i = 2; i <= n; i++) {
+            int current = 0;
+
             if (message[i - 1] != '0') {
-                dp[i] += dp[i - 1];
+                current += prev;
             }
-            if (message[i - 1] < '7' && (message[i - 2] == '1' || message[i - 2] == '2')) {
-                dp[i] += dp[i - 2];
+            int twoDigit = (message[i - 2] - '0') * 10 + (message[i - 1] - '0');
+            if (twoDigit >= 10 && twoDigit <= 26) {
+                current += befprev;
             }
+
+            befprev = prev;
+            prev = current;
         }
 
-        return dp[n];
+        return prev;
     }
 
 };
@@ -284,6 +288,7 @@ int main() {
     // Daily Coding Problem: Problem #7 [Medium] - 2/10/25
     cout << s.numDecodings("101") << endl;
     cout << s.numDecodings("110") << endl;
+    cout << s.numDecodings("2611055971756562") << endl;
 
 
     return 0;
