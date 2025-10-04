@@ -216,6 +216,24 @@ public:
         count++;
         return true;
     }
+
+    // Daily Coding Problem: Problem #9 [Hard] - 4/10/25
+    int largestSumOfNonAdjacentNumbers(vector<int>& nums) {
+        int n = nums.size();
+        if (n == 0) return 0;
+        if (n == 1) return nums[0];
+
+        vector<int> dp(n, 0);
+        dp[0] = nums[0];
+        dp[1] = max(nums[0], nums[1]);
+
+        for (int i = 2; i < n; i++) {
+            dp[i] = max(dp[i - 1], dp[i - 2] + nums[i]);
+        }
+
+        return dp[n - 1];
+    }
+
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -312,13 +330,18 @@ int main() {
         // cout << s.numDecodings("2611055971756562") << endl;
 
     // Daily Coding Problem: Problem #8 [Easy] - 3/10/25
-    TreeNode* root = new TreeNode(0, new TreeNode(1), new TreeNode(0, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(0)));
-    TreeNode* root2 = new TreeNode(5, new TreeNode(5, new TreeNode(5), new TreeNode(5)), new TreeNode(5));
-    TreeNode* root3 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
-    TreeNode* root4 = new TreeNode(1);
-    TreeNode* root5 = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(1, nullptr, new TreeNode(1)));
+        // TreeNode* root = new TreeNode(0, new TreeNode(1), new TreeNode(0, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(0)));
+        // TreeNode* root2 = new TreeNode(5, new TreeNode(5, new TreeNode(5), new TreeNode(5)), new TreeNode(5));
+        // TreeNode* root3 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
+        // TreeNode* root4 = new TreeNode(1);
+        // TreeNode* root5 = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(1, nullptr, new TreeNode(1)));
 
-    cout << s.univalTreeNumber(root5) << endl;
+        // cout << s.univalTreeNumber(root5) << endl;
+
+    // Daily Coding Problem: Problem #9 [Hard] - 4/10/25
+    vector<int> nums = {5, 1, 1, 5}; // expected 10 = 5 + 5
+    vector<int> nums2 = {2, 4, 6, 2, 5}; // expected 13 = 2 + 6 + 5
+    cout << s.largestSumOfNonAdjacentNumbers(nums) << endl;
 
     return 0;
 }
