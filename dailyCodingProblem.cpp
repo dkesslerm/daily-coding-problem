@@ -13,6 +13,7 @@ struct TreeNode {
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
 };
 
 class Solution {
@@ -195,6 +196,26 @@ public:
         return prev;
     }
 
+    // Daily Coding Problem: Problem #8 [Easy] - 3/10/25
+    int univalTreeNumber(TreeNode* root) {
+        int count = 0;
+        isUnival(root, count);
+        return count;
+    }
+
+    bool isUnival(TreeNode* root, int& count) {
+        if (!root) return true;
+
+        bool left = isUnival(root->left, count);
+        bool right = isUnival(root->right, count);
+
+        if (!left || !right) return false;
+        if (root->left && root->left->val != root->val) return false;
+        if (root->right && root->right->val != root->val) return false;
+
+        count++;
+        return true;
+    }
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -258,7 +279,7 @@ int main() {
         //     cout << i << ", ";
         // }
 
-    // Daily Coding Problem: Problem #3 [Medium] - 28/9/25int index
+    // Daily Coding Problem: Problem #3 [Medium] - 28/9/25
         // Try it in Leetcode 297!
 
     // Daily Coding Problem: Problem #4 [Hard] - 29/9/25 - Leetcode 41
@@ -286,10 +307,18 @@ int main() {
         // }
 
     // Daily Coding Problem: Problem #7 [Medium] - 2/10/25
-    cout << s.numDecodings("101") << endl;
-    cout << s.numDecodings("110") << endl;
-    cout << s.numDecodings("2611055971756562") << endl;
+        // cout << s.numDecodings("101") << endl;
+        // cout << s.numDecodings("110") << endl;
+        // cout << s.numDecodings("2611055971756562") << endl;
 
+    // Daily Coding Problem: Problem #8 [Easy] - 3/10/25
+    TreeNode* root = new TreeNode(0, new TreeNode(1), new TreeNode(0, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(0)));
+    TreeNode* root2 = new TreeNode(5, new TreeNode(5, new TreeNode(5), new TreeNode(5)), new TreeNode(5));
+    TreeNode* root3 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
+    TreeNode* root4 = new TreeNode(1);
+    TreeNode* root5 = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(1, nullptr, new TreeNode(1)));
+
+    cout << s.univalTreeNumber(root5) << endl;
 
     return 0;
 }
