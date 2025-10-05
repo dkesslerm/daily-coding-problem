@@ -6,6 +6,9 @@
 #include <unordered_map>
 #include <vector>
 #include <queue>
+#include <chrono>
+#include <thread>
+#include <functional>
 using namespace std;
 
 struct TreeNode {
@@ -234,6 +237,11 @@ public:
         return dp[n - 1];
     }
 
+    // Daily Coding Problem: Problem #10 [Medium] - 5/10/25
+    void jobScheduler(function<void()> f, int n) {
+        this_thread::sleep_for(std::chrono::milliseconds(n));
+        f();
+    }
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -339,9 +347,19 @@ int main() {
         // cout << s.univalTreeNumber(root5) << endl;
 
     // Daily Coding Problem: Problem #9 [Hard] - 4/10/25
-    vector<int> nums = {5, 1, 1, 5}; // expected 10 = 5 + 5
-    vector<int> nums2 = {2, 4, 6, 2, 5}; // expected 13 = 2 + 6 + 5
-    cout << s.largestSumOfNonAdjacentNumbers(nums) << endl;
+        // vector<int> nums = {5, 1, 1, 5}; // expected 10 = 5 + 5
+        // vector<int> nums2 = {2, 4, 6, 2, 5}; // expected 13 = 2 + 6 + 5
+        // cout << s.largestSumOfNonAdjacentNumbers(nums) << endl;
+
+    // Daily Coding Problem: Problem #10 [Medium] - 5/10/25
+    function<void()> f = []() {
+        cout << "Hello world!" << endl;
+    };
+
+    cout << "Waiting..." << endl;
+    s.jobScheduler(f, 2000);
+
+
 
     return 0;
 }
