@@ -242,6 +242,18 @@ public:
         this_thread::sleep_for(std::chrono::milliseconds(n));
         f();
     }
+
+    // Daily Coding Problem: Problem #11 [Medium] - 6/10/25
+    vector<string> autocomplete(vector<string> dictionary, string query) {
+        vector<string> res;
+        for (string s : dictionary) {
+            if (s.substr(0, query.size()) == query) {
+                res.push_back(s);
+            }
+        }
+
+        return res;
+    }
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -352,12 +364,25 @@ int main() {
         // cout << s.largestSumOfNonAdjacentNumbers(nums) << endl;
 
     // Daily Coding Problem: Problem #10 [Medium] - 5/10/25
-    function<void()> f = []() {
-        cout << "Hello world!" << endl;
-    };
+        // function<void()> f = []() {
+        //     cout << "Hello world!" << endl;
+        // };
 
-    cout << "Waiting..." << endl;
-    s.jobScheduler(f, 2000);
+        // cout << "Waiting..." << endl;
+        // s.jobScheduler(f, 2000);
+
+    // Daily Coding Problem: Problem #11 [Medium] - 6/10/25
+    vector<string> dict = {"dog", "deer", "deal"};
+    string query = "d";
+    vector<string> res = s.autocomplete(dict, query);
+    cout << "[";
+    for (string s : res) {
+        for (char c : s) {
+            cout << c;
+        }
+        cout << ", ";
+    }
+    cout << "\b\b]" << endl;
 
 
 
