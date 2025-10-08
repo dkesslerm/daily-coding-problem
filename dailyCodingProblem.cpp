@@ -19,6 +19,86 @@ struct TreeNode {
     TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
 };
 
+
+struct TrieNode {
+    unordered_map<char, TrieNode*> children;
+    bool isEndOfWord = false;
+};
+
+class Trie {
+private:
+    TrieNode* root;
+public:
+    Trie() {
+        root = new TrieNode();
+    }
+
+    void insert(string word) {
+        TrieNode* current = root;
+        for (char c : word) {
+            if (!current->children[c]) {
+                current->children[c] = new TrieNode();
+            }
+            current = current->children[c];
+        }
+        current->isEndOfWord = true;
+    }
+
+    bool search(string word) {
+        TrieNode* current = root;
+        for (char c : word) {
+            if (!current->children[c]) {
+                return false;
+            }
+            current = current->children[c];
+        }
+
+        return current->isEndOfWord;
+    }
+
+    bool startsWith(string prefix) {
+        TrieNode* current = root;
+        for (char c : prefix) {
+            if (!current->children[c]) {
+                return false;
+            }
+            current = current->children[c];
+        }
+
+        return true;
+    }
+
+    void collectWords(TrieNode* current, string prefix, vector<string>& result) {
+        if (!current) return;
+
+        if (current->isEndOfWord) {
+            result.push_back(prefix);
+        }
+
+        for (auto it : current->children) {
+            collectWords(it.second, prefix + it.first, result);
+        }
+
+    }
+
+    vector<string> getWordsWithPrefix(string prefix) {
+        vector<string> res;
+        TrieNode* current = root;
+
+        for (char c : prefix) {
+            if (!current->children[c]) {
+                return {};
+            }
+            current = current->children[c];
+        }
+
+        collectWords(current, prefix, res);
+
+        return res;
+    }
+};
+
+
 class Solution {
 public:
     // Daily Coding Problem: Problem #1 [Easy] - 26/9/25
@@ -245,14 +325,25 @@ public:
 
     // Daily Coding Problem: Problem #11 [Medium] - 6/10/25
     vector<string> autocomplete(vector<string> dictionary, string query) {
-        vector<string> res;
+        Trie t;
         for (string s : dictionary) {
-            if (s.substr(0, query.size()) == query) {
-                res.push_back(s);
-            }
+            t.insert(s);
+        }
+        return t.getWordsWithPrefix(query);
+    }
+
+    // Daily Coding Problem: Problem #12 [Hard] - 7/10/25
+    int numberOfSteps(int n) {
+        if (n == 1) return 1;
+        vector<int> dp(n + 1, 0);
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
         }
 
-        return res;
+        return dp[n];
     }
 };
 
@@ -372,19 +463,20 @@ int main() {
         // s.jobScheduler(f, 2000);
 
     // Daily Coding Problem: Problem #11 [Medium] - 6/10/25
-    vector<string> dict = {"dog", "deer", "deal"};
-    string query = "d";
-    vector<string> res = s.autocomplete(dict, query);
-    cout << "[";
-    for (string s : res) {
-        for (char c : s) {
-            cout << c;
+        vector<string> dict = {"dog", "deer", "deal"};
+        string query = "d";
+        vector<string> res = s.autocomplete(dict, query);
+        cout << "[";
+        for (string s : res) {
+            for (char c : s) {
+                cout << c;
+            }
+            cout << ", ";
         }
-        cout << ", ";
-    }
-    cout << "\b\b]" << endl;
+        cout << "\b\b]" << endl;
 
-
+    // Daily Coding Problem: Problem #12 [Hard] - 7/10/25
+    // cout << s.numberOfSteps(4);
 
     return 0;
 }
