@@ -1,4 +1,3 @@
-#include <cctype>
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -9,6 +8,7 @@
 #include <chrono>
 #include <thread>
 #include <functional>
+#include <algorithm>
 using namespace std;
 
 struct TreeNode {
@@ -345,6 +345,23 @@ public:
 
         return dp[n];
     }
+
+    int generalizedNumberOfSteps(int n, vector<int>& X) {
+        if (n == 1) return 1;
+        vector<int> dp(n + 1, 0);
+        dp[0] = 1;
+
+        sort(X.begin(), X.end());
+
+        for (int i = 1; i <= n; i++) {
+            for (int x : X) {
+                if (x > i) break;
+                dp[i] += dp[i - x];
+            }
+        }
+
+        return dp[n];
+    }
 };
 
 // Daily Coding Problem: Problem #6 [Hard] - 1/10/25
@@ -463,20 +480,23 @@ int main() {
         // s.jobScheduler(f, 2000);
 
     // Daily Coding Problem: Problem #11 [Medium] - 6/10/25
-        vector<string> dict = {"dog", "deer", "deal"};
-        string query = "d";
-        vector<string> res = s.autocomplete(dict, query);
-        cout << "[";
-        for (string s : res) {
-            for (char c : s) {
-                cout << c;
-            }
-            cout << ", ";
-        }
-        cout << "\b\b]" << endl;
+        // vector<string> dict = {"dog", "deer", "deal"};
+        // string query = "d";
+        // vector<string> res = s.autocomplete(dict, query);
+        // cout << "[";
+        // for (string s : res) {
+        //     for (char c : s) {
+        //         cout << c;
+        //     }
+        //     cout << ", ";
+        // }
+        // cout << "\b\b]" << endl;
 
     // Daily Coding Problem: Problem #12 [Hard] - 7/10/25
-    // cout << s.numberOfSteps(4);
+    int n = 10;
+    vector<int> X = {1, 3, 5};
+
+    cout << s.generalizedNumberOfSteps(n, X) << endl;
 
     return 0;
 }
