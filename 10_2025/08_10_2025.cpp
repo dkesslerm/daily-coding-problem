@@ -1,12 +1,11 @@
 #include <iostream>
 #include <unordered_map>
-#include <vector>
 #include <algorithm>
 using namespace std;
 
 class Solution {
 public:
-    // Daily Coding Problem: Problem #13 [Hard] - 7/10/25
+    // Daily Coding Problem: Problem #13 [Hard] - 8/10/25
     // This problem was asked by Amazon.
 
     // Given an integer k and a string s,
@@ -42,7 +41,7 @@ public:
 int main() {
     Solution s;
 
-    // Daily Coding Problem: Problem #13 [Hard] - 7/10/25
+    // Daily Coding Problem: Problem #13 [Hard] - 8/10/25
     string str = "abcba";
     int k = 2;
 
