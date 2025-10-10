@@ -11,6 +11,13 @@
 #include <algorithm>
 using namespace std;
 
+/*
+ * This file is now outdated. It holds the solutions
+ * from Day 1 to Day 12 of the challenge (26/09 to 07/10).
+ *
+ * For the problems after that, check each individual file.
+ */
+
 struct TreeNode {
     int val;
     TreeNode *left;
