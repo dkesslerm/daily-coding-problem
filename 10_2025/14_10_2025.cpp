@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
-#include <deque>
 using namespace std;
 
 // Daily Coding Problem: Problem #19 [Medium] - 14/10/25
