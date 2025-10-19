@@ -1,8 +1,5 @@
-#include <algorithm>
 #include <cstdlib>
 #include <iostream>
-#include <list>
-#include <vector>
 using namespace std;
 
 // Daily Coding Problem: Problem #20 [Easy] - 15/10/25

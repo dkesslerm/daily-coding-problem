@@ -74,8 +74,8 @@ int main() {
         {14, 3, 19},
     };
     vector<vector<int> > costs = {
-            { 1, 5, 7 }, { 5, 8, 4 }, { 3, 2, 9 }, { 1, 2, 4 }
-        };
+        { 1, 5, 7 }, { 5, 8, 4 }, { 3, 2, 9 }, { 1, 2, 4 }
+    };
 
     cout << s.houseMinCost(matrix) << endl;
 
