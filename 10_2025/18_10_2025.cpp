@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-// Daily Coding Problem: Problem #22 [Medium] - 17/10/25
+// Daily Coding Problem: Problem #23 [Easy] - 18/10/25
 //
 // This problem was asked by Google.
 // You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall.
@@ -74,7 +74,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #22 [Medium] - 17/10/25
+    // Daily Coding Problem: Problem #23 [Easy] - 18/10/25
     Solution s;
 
     vector<vector<bool>> board = {
