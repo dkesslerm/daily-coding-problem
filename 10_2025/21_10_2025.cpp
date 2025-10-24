@@ -1,7 +1,5 @@
-#include <cinttypes>
 #include <cstdlib>
 #include <iostream>
-#include <vector>
 using namespace std;
 
 // Daily Coding Problem: Problem #26 [Medium] - 21/10/25
