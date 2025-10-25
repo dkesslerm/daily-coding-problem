@@ -2,10 +2,9 @@
 #include <cstdlib>
 #include <iostream>
 #include <cassert>
-#include <vector>
 using namespace std;
 
-// Daily Coding Problem: Problem #28 [Medium] - 23/10/25
+// Daily Coding Problem: Problem #29 [Easy] - 24/10/25
 //
 // This problem was asked by Amazon.
 // Run-length encoding is a fast and simple method of encoding
@@ -64,7 +63,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #28 [Medium] - 23/10/25
+    // Daily Coding Problem: Problem #29 [Easy] - 24/10/25
     Solution s;
     string s1 = "AAAAAAAAAAABBBCDDAF";
     string s2 = s.encodeRunLengthString(s1);
