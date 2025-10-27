@@ -91,7 +91,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #29 [Medium] - 25/10/25
+    // Daily Coding Problem: Problem #30 [Medium] - 25/10/25
     Solution s;
     vector<int> walls = {3, 0, 1, 3, 0, 5};
 
