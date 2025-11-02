@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     // Daily Coding Problem: Problem #12 [Hard] - 7/10/25
-
+    //
     // This problem was asked by Amazon.
     // There exists a staircase with N steps, and you can climb up either
     // 1 or 2 steps at a time. Given N, write a function that returns the

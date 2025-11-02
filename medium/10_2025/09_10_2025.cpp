@@ -11,7 +11,7 @@ public:
     // The area of a circle is defined as πr^2.
     // Estimate π to 3 decimal places using a Monte Carlo method.
     // Hint: The basic equation of a circle is x² + y² = r²
-    //
+
     // I didn't know what a Monte Carlo algorithm was,
     // and the Wiki page explains it pretty well:
     // https://en.wikipedia.org/wiki/Monte_Carlo_algorithm

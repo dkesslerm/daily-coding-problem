@@ -7,12 +7,12 @@ using namespace std;
 // This problem was asked by Google.
 // Given two singly linked lists that intersect at some point, find the intersecting node.
 // The lists are non-cyclical.
-
+//
 // Example:
 // List A: 3 -> 7 -> 8 -> 10
 // List B: 99 -> 1 -> 8 -> 10
 // Output: Return the node with value 8.
-
+//
 // Note:
 // - Assume nodes with the same value are the exact same node objects.
 // - Solve this in O(M + N) time, where M and N are the lengths of the lists,

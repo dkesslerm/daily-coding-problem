@@ -25,7 +25,6 @@ using namespace std;
 //      * index 3 traps 3 units.
 //      (We cannot trap 5 at index 5 because water would run off to the left.)
 //    Total trapped water = 8
-//
 
 class Solution {
 public:

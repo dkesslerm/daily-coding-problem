@@ -15,7 +15,7 @@ struct TreeNode {
 class Solution {
 public:
     // Daily Coding Problem: Problem #3 [Medium] - 28/9/25 - Leetcode 297
-
+    //
     // This problem was asked by Google.
     // Given the root to a binary tree, implement:
     //   - serialize(root): Serializes the tree into a string.
