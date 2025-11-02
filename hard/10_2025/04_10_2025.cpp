@@ -16,7 +16,7 @@ public:
     // [5, 1, 1, 5] should return 10, since we pick 5 and 5.
     //
     // Follow-up: Can you do this in O(N) time and constant space?
-    //
+
     // This is a variant of the house robber problem (in this version,
     // numbers can be 0 or negative insted of just positive). The same
     // dynamic programming algorithm works just fine!
