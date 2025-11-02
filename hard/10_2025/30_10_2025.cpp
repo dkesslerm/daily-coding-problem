@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-// Daily Coding Problem: Problem #34 [Medium] - 29/10/25
+// Daily Coding Problem: Problem #35 [Hard] - 30/10/25
 //
 // This problem was asked by Google.
 // Given an array of strictly the characters 'R', 'G', and 'B',
@@ -39,7 +39,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #34 [Medium] - 29/10/25
+    // Daily Coding Problem: Problem #35 [Hard] - 30/10/25
     Solution s;
 
     vector<char> input = {'G', 'B', 'R', 'R', 'B', 'R', 'G'};
