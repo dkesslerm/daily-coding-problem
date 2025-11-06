@@ -20,7 +20,6 @@ class Solution {
 public:
     int findSingleNumber(vector<int>& v) {
         int res = 0;
-        int n = v.size();
         for (int i = 0; i < 32; i++) {
             int bitSum = 0;
             for (int num : v) {
