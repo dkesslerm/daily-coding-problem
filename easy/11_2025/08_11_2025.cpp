@@ -20,30 +20,47 @@ using namespace std;
 
 class MaxStack {
 private:
-    stack<pair<int, int>> s;
+    // stack<pair<int, int>> s;
+    stack<int> sEff;
+    int currMax;
 public:
     void push(int val) {
-        if (s.empty()) {
-            s.push({val, val});
+        // if (s.empty()) {
+        //     s.push({val, val});
+        // } else {
+        //     int maxVal = max(val, s.top().second);
+        //     s.push({val, maxVal});
+        // }
+        if (val <= currMax) {
+            sEff.push(val);
         } else {
-            int maxVal = max(val, s.top().second);
-            s.push({val, maxVal});
+            sEff.push(2*val - currMax);
+            currMax = val;
         }
     }
 
     int pop() {
-        assert(!s.empty());
+        // assert(!s.empty());
+        assert(!sEff.empty());
 
-        int val = s.top().first;
-        s.pop();
+        // int val = s.top().first;
+        // s.pop();
 
-        return val;
+        int val = sEff.top();
+        sEff.pop();
+        if (val <= currMax) {
+            return val;
+        } else {
+            int maxVal = currMax;
+            currMax = 2 * currMax - val;
+            return maxVal;
+        }
     }
 
     int getMax() {
-        assert(!s.empty());
+        assert(!sEff.empty());
 
-        return s.top().second;
+        return currMax;
     }
 };
 
