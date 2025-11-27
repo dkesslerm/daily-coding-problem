@@ -1,6 +1,5 @@
 #include <iostream>
-#include <random>
-#include <map>
+#include <vector>
 using namespace std;
 
 // Daily Coding Problem: Problem #47 [Easy] - 12/11/25
