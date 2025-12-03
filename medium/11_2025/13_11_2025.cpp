@@ -1,4 +1,3 @@
-#include <compare>
 #include <iostream>
 #include <vector>
 #include <deque>
@@ -61,27 +60,27 @@ public:
 
     // claude created this
     void printTreeVisualHelper(TreeNode* root, string indent, bool isRight) {
-            if (!root) return;
+        if (!root) return;
 
-            cout << indent;
-            if (isRight) {
-                cout << "└── ";
-                indent += "    ";
-            } else {
-                cout << "├── ";
-                indent += "│   ";
+        cout << indent;
+        if (isRight) {
+            cout << "└── ";
+            indent += "    ";
+        } else {
+            cout << "├── ";
+            indent += "│   ";
+        }
+        cout << root->val << endl;
+
+        if (root->left || root->right) {
+            if (root->right) {
+                printTreeVisualHelper(root->right, indent, true);
             }
-            cout << root->val << endl;
-
-            if (root->left || root->right) {
-                if (root->right) {
-                    printTreeVisualHelper(root->right, indent, true);
-                }
-                if (root->left) {
-                    printTreeVisualHelper(root->left, indent, false);
-                }
+            if (root->left) {
+                printTreeVisualHelper(root->left, indent, false);
             }
         }
+    }
 };
 
 int main() {

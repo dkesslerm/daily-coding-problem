@@ -59,7 +59,7 @@ int main() {
     TreeNode* root4 = new TreeNode(1);
     TreeNode* root5 = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(1)), new TreeNode(1, nullptr, new TreeNode(1)));
 
-    cout << s.univalTreeNumber(root5) << endl;
+    cout << s.univalTreeNumber(root) << endl;
 
     return 0;
 }
