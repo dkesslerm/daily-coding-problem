@@ -4,7 +4,7 @@
 #include <sstream>
 using namespace std;
 
-// Daily Coding Problem: Problem #56 [Medium] - 21/11/25
+// Daily Coding Problem: Problem #57 [Medium] - 22/11/25
 //
 // This problem was asked by Amazon.
 //
@@ -42,14 +42,17 @@ public:
                 }
             }
         }
+
         if (!line.empty()) {
             res.push_back(line);
         }
+
         return res;
     }
 };
 
 int main() {
+    // Daily Coding Problem: Problem #57 [Medium] - 22/11/25
     Solution s;
 
     // Test 1 — Given example
