@@ -14,7 +14,7 @@ namespace fs = filesystem;
 // ============================================
 // Set to empty string "" to disable filtering
 // Examples: "Google", "Amazon", "Meta", "Microsoft"
-const string FILTER = "amazon";
+const string FILTER = "knight";
 
 vector<fs::path> get_all_cpp_files(const fs::path& root) {
     vector<fs::path> cpp_files;

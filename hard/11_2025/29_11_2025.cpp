@@ -4,7 +4,7 @@
 #include <unordered_map>
 using namespace std;
 
-// Daily Coding Problem: Problem #59 [Hard] - 24/11/25
+// Daily Coding Problem: Problem #64 [Hard] - 29/11/25
 //
 // This problem was asked by Google.
 // A knight's tour is a sequence of moves by a knight
@@ -58,7 +58,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #59 [Hard] - 24/11/25
+    // Daily Coding Problem: Problem #64 [Hard] - 29/11/25
     Solution s;
 
     cout << s.numOfKnightTours(6) << endl;
