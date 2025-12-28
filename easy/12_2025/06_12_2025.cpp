@@ -3,14 +3,11 @@
 #include <random>
 using namespace std;
 
-// Daily Coding Problem: Problem #70 [Easy] - 05/12/25
+// Daily Coding Problem: Problem #71 [Easy] - 06/12/25
 //
-// This problem was asked by Microsoft.
-// A number is considered perfect if its digits sum up to exactly 10.
-//
-// Given a positive integer n, return the n-th perfect number.
-//
-// For example, given 1, you should return 19. Given 2, you should return 28.
+// Using a function rand7() that returns an integer
+// from 1 to 7 (inclusive) with uniform probability,
+// implement a function rand5() that returns an integer from 1 to 5 (inclusive).
 
 class Solution {
 public:
@@ -47,7 +44,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #70 [Easy] - 05/12/25
+    // Daily Coding Problem: Problem #71 [Easy] - 06/12/25
     Solution s;
 
     s.printResults(1000000);
