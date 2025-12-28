@@ -2,7 +2,7 @@
 #include <unordered_map>
 using namespace std;
 
-// Daily Coding Problem: Problem #52 [Hard] - 17/11/25
+// Daily Coding Problem: Problem #67 [Hard] - 02/12/25
 //
 // This problem was asked by Google.
 // Implement an LFU (Least Frequently Used) cache.
@@ -119,6 +119,8 @@ public:
 };
 
 int main() {
+    // Daily Coding Problem: Problem #67 [Hard] - 02/12/25
+
     LFUCache cache(2);
 
     cache.set(1, 1);
