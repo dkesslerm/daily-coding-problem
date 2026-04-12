@@ -5,7 +5,7 @@
 #include <sstream>
 using namespace std;
 
-// Daily Coding Problem: Problem #60 [Medium] - 25/11/25
+// Daily Coding Problem: Problem #61 [Medium] - 26/11/25
 //
 // This problem was asked by Google.
 // Implement integer exponentiation. That is, implement the
@@ -44,7 +44,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #60 [Medium] - 25/11/25
+    // Daily Coding Problem: Problem #61 [Medium] - 26/11/25
     Solution s;
 
     cout << s.recursivePower(2, 10) << endl;
