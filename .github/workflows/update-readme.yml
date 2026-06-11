@@ -1,0 +1,88 @@
+name: Auto-update README
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "easy/**/*.cpp"
+      - "medium/**/*.cpp"
+      - "hard/**/*.cpp"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # Needed to push the updated README and problems.json
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # Need the previous commit to detect added files
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Detect newly added .cpp files
+        id: detect
+        run: |
+          NEW=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep '\.cpp$' || true)
+          echo "Found new files: $NEW"
+          if [ -z "$NEW" ]; then
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          else
+            NEW_ONELINE=$(echo "$NEW" | tr '\n' ' ')
+            echo "has_new=true"           >> $GITHUB_OUTPUT
+            echo "new_files=$NEW_ONELINE" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Register new problems (no API needed)
+        if: steps.detect.outputs.has_new == 'true'
+        run: |
+          python - << 'PYEOF'
+          import json, os, sys
+          from pathlib import Path
+
+          DIFFICULTIES = ["easy", "medium", "hard"]
+          problems_file = Path("problems.json")
+
+          data = json.loads(problems_file.read_text()) if problems_file.exists() else {"problems": []}
+          known = {p["file"] for p in data["problems"]}
+
+          new_files = os.environ.get("NEW_FILES", "").split()
+          added = 0
+          for f in new_files:
+              if not f.endswith(".cpp") or f in known:
+                  continue
+              parts = Path(f).parts
+              difficulty = next((p for p in parts if p in DIFFICULTIES), "unknown")
+              data["problems"].append({
+                  "file":       f,
+                  "difficulty": difficulty,
+                  "title":      Path(f).stem.replace("_", " ").replace("-", " ").title(),
+                  "topics":     [],
+              })
+              added += 1
+              print(f"  + registered: {f}")
+
+          problems_file.write_text(json.dumps(data, indent=2))
+          print(f"Done. {added} problem(s) registered (topics pending — run classify.py locally with Claude Code).")
+          PYEOF
+        env:
+          NEW_FILES: ${{ steps.detect.outputs.new_files }}
+
+      - name: Regenerate README
+        if: steps.detect.outputs.has_new == 'true'
+        run: python generate_readme.py
+
+      - name: Commit and push changes
+        if: steps.detect.outputs.has_new == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add problems.json README.md
+          git diff --cached --quiet || git commit -m "docs: auto-update README [skip ci]"
+          git push
