@@ -1,7 +1,7 @@
 # Daily Coding Problem — Solutions
 
 > C++ solutions to the [Daily Coding Problem](https://www.dailycodingproblem.com/) newsletter.
-> *README is auto-generated — do not edit manually.*
+> *README is auto-generated.*
 
 ## 📊 Stats
 
