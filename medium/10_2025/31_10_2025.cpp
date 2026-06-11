@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Daily Coding Problem: Problem #34 [Medium] - 29/10/25
+// Daily Coding Problem: Problem #36 [Medium] - 31/10/25
 //
 // This problem was asked by Dropbox.
 // Given the root to a binary search tree, find the second largest node in the tree.
@@ -80,7 +80,7 @@ public:
 };
 
 int main() {
-    // Daily Coding Problem: Problem #34 [Medium] - 29/10/25
+    // Daily Coding Problem: Problem #36 [Medium] - 31/10/25
 
     BinarySearchTree t1;
     t1.addVal(1); t1.addVal(2); t1.addVal(-1); t1.addVal(5); t1.addVal(7);

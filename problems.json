@@ -1,0 +1,436 @@
+{
+  "problems": [
+    {
+      "file": "easy/09_2025/26_09_2025.cpp",
+      "difficulty": "easy",
+      "title": "Two Sum Check",
+      "topics": ["arrays", "hash-table"]
+    },
+    {
+      "file": "easy/10_2025/03_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Count Unival Subtrees",
+      "topics": ["trees", "recursion"]
+    },
+    {
+      "file": "easy/10_2025/11_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Fixed-Size Order Log",
+      "topics": ["queue"]
+    },
+    {
+      "file": "easy/10_2025/15_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Find Intersecting Linked List Node",
+      "topics": ["linked-lists", "two-pointers"]
+    },
+    {
+      "file": "easy/10_2025/16_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Minimum Rooms for Overlapping Lectures",
+      "topics": ["heap", "sorting"]
+    },
+    {
+      "file": "easy/10_2025/18_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Shortest Path in Boolean Grid",
+      "topics": ["graphs", "matrix"]
+    },
+    {
+      "file": "easy/10_2025/22_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Balanced Brackets Validator",
+      "topics": ["strings", "stack"]
+    },
+    {
+      "file": "easy/10_2025/24_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Run-Length Encoding and Decoding",
+      "topics": ["strings"]
+    },
+    {
+      "file": "easy/10_2025/26_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Edit Distance Between Two Strings",
+      "topics": ["dynamic-programming", "strings"]
+    },
+    {
+      "file": "easy/10_2025/28_10_2025.cpp",
+      "difficulty": "easy",
+      "title": "Running Median of Number Stream",
+      "topics": ["heap"]
+    },
+    {
+      "file": "easy/11_2025/01_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Generate Power Set",
+      "topics": ["bit-manipulation", "recursion"]
+    },
+    {
+      "file": "easy/11_2025/08_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Max Stack with O(1) Maximum",
+      "topics": ["stack"]
+    },
+    {
+      "file": "easy/11_2025/10_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Implement Rand7 from Rand5",
+      "topics": ["math"]
+    },
+    {
+      "file": "easy/11_2025/12_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Maximum Profit from Stock Prices",
+      "topics": ["arrays", "two-pointers"]
+    },
+    {
+      "file": "easy/11_2025/15_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Evaluate Arithmetic Expression Tree",
+      "topics": ["trees", "recursion"]
+    },
+    {
+      "file": "easy/11_2025/20_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "URL Shortener with Restore",
+      "topics": ["hash-table", "strings"]
+    },
+    {
+      "file": "easy/11_2025/28_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Word Search in 2D Matrix",
+      "topics": ["matrix", "strings"]
+    },
+    {
+      "file": "easy/11_2025/30_11_2025.cpp",
+      "difficulty": "easy",
+      "title": "Print Matrix in Clockwise Spiral",
+      "topics": ["matrix"]
+    },
+    {
+      "file": "easy/12_2025/04_12_2025.cpp",
+      "difficulty": "easy",
+      "title": "Maximum Product of Three Numbers",
+      "topics": ["arrays", "sorting"]
+    },
+    {
+      "file": "easy/12_2025/05_12_2025.cpp",
+      "difficulty": "easy",
+      "title": "Nth Number with Digit Sum Ten",
+      "topics": ["math"]
+    },
+    {
+      "file": "easy/12_2025/06_12_2025.cpp",
+      "difficulty": "easy",
+      "title": "Implement Rand5 from Rand7",
+      "topics": ["math"]
+    },
+    {
+      "file": "easy/04_2026/12_04_2026.cpp",
+      "difficulty": "easy",
+      "title": "Find First Recurring Character",
+      "topics": ["strings", "hash-table"]
+    },
+    {
+      "file": "medium/09_2025/28_09_2025.cpp",
+      "difficulty": "medium",
+      "title": "Serialize and Deserialize Binary Tree",
+      "topics": ["trees"]
+    },
+    {
+      "file": "medium/09_2025/30_09_2025.cpp",
+      "difficulty": "medium",
+      "title": "Functional Cons Car Cdr with Closures",
+      "topics": ["other"]
+    },
+    {
+      "file": "medium/10_2025/02_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Count Ways to Decode Message",
+      "topics": ["dynamic-programming", "strings"]
+    },
+    {
+      "file": "medium/10_2025/05_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Delayed Job Scheduler",
+      "topics": ["other"]
+    },
+    {
+      "file": "medium/10_2025/06_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Autocomplete System with Trie",
+      "topics": ["trees", "strings"]
+    },
+    {
+      "file": "medium/10_2025/09_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Monte Carlo Estimation of Pi",
+      "topics": ["math"]
+    },
+    {
+      "file": "medium/10_2025/10_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Random Element from Data Stream",
+      "topics": ["other"]
+    },
+    {
+      "file": "medium/10_2025/14_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Minimum Cost to Paint Houses",
+      "topics": ["dynamic-programming", "arrays"]
+    },
+    {
+      "file": "medium/10_2025/17_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Reconstruct Sentence from Dictionary",
+      "topics": ["strings", "arrays"]
+    },
+    {
+      "file": "medium/10_2025/19_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Locking Binary Tree Nodes",
+      "topics": ["trees"]
+    },
+    {
+      "file": "medium/10_2025/21_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Remove Kth Last Linked List Node",
+      "topics": ["linked-lists", "two-pointers"]
+    },
+    {
+      "file": "medium/10_2025/23_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Full Text Justification",
+      "topics": ["strings", "greedy"]
+    },
+    {
+      "file": "medium/10_2025/25_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Trapping Rainwater",
+      "topics": ["two-pointers", "arrays"]
+    },
+    {
+      "file": "medium/10_2025/29_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Minimum Insertions to Make Palindrome",
+      "topics": ["dynamic-programming", "strings"]
+    },
+    {
+      "file": "medium/10_2025/31_10_2025.cpp",
+      "difficulty": "medium",
+      "title": "Second Largest Node in BST",
+      "topics": ["trees", "binary-search"]
+    },
+    {
+      "file": "medium/11_2025/04_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Conway's Game of Life",
+      "topics": ["matrix", "other"]
+    },
+    {
+      "file": "medium/11_2025/06_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Reconstruct Flight Itinerary",
+      "topics": ["graphs", "greedy"]
+    },
+    {
+      "file": "medium/11_2025/09_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Count Array Inversions",
+      "topics": ["sorting", "arrays"]
+    },
+    {
+      "file": "medium/11_2025/13_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Reconstruct Tree from Traversals",
+      "topics": ["trees", "recursion"]
+    },
+    {
+      "file": "medium/11_2025/14_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Maximum Sum Contiguous Subarray",
+      "topics": ["dynamic-programming", "arrays"]
+    },
+    {
+      "file": "medium/11_2025/16_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Shuffle Deck with Uniform Probability",
+      "topics": ["arrays", "math"]
+    },
+    {
+      "file": "medium/11_2025/18_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Queue Implemented Using Two Stacks",
+      "topics": ["stack", "queue"]
+    },
+    {
+      "file": "medium/11_2025/21_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Graph K-Coloring",
+      "topics": ["graphs", "backtracking"]
+    },
+    {
+      "file": "medium/11_2025/22_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Break String Into Lines of Max Width",
+      "topics": ["strings", "greedy"]
+    },
+    {
+      "file": "medium/11_2025/23_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Search in Rotated Sorted Array",
+      "topics": ["binary-search", "arrays"]
+    },
+    {
+      "file": "medium/11_2025/25_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Partition Multiset Into Equal Sums",
+      "topics": ["dynamic-programming", "arrays"]
+    },
+    {
+      "file": "medium/11_2025/26_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Fast Integer Exponentiation",
+      "topics": ["math", "recursion"]
+    },
+    {
+      "file": "medium/11_2025/27_11_2025.cpp",
+      "difficulty": "medium",
+      "title": "Count Paths in Grid Moving Right/Down",
+      "topics": ["dynamic-programming", "matrix"]
+    },
+    {
+      "file": "medium/12_2025/01_12_2025.cpp",
+      "difficulty": "medium",
+      "title": "Simulate Unbiased Coin from Biased",
+      "topics": ["math", "other"]
+    },
+    {
+      "file": "medium/12_2025/03_12_2025.cpp",
+      "difficulty": "medium",
+      "title": "Count Attacking Bishop Pairs",
+      "topics": ["arrays", "hash-table"]
+    },
+    {
+      "file": "hard/09_2025/27_09_2025.cpp",
+      "difficulty": "hard",
+      "title": "Product Array Excluding Self",
+      "topics": ["arrays"]
+    },
+    {
+      "file": "hard/09_2025/29_09_2025.cpp",
+      "difficulty": "hard",
+      "title": "First Missing Positive Integer",
+      "topics": ["arrays"]
+    },
+    {
+      "file": "hard/10_2025/01_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "XOR Memory-Efficient Doubly Linked List",
+      "topics": ["linked-lists", "bit-manipulation"]
+    },
+    {
+      "file": "hard/10_2025/04_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Largest Sum of Non-Adjacent Numbers",
+      "topics": ["dynamic-programming", "arrays"]
+    },
+    {
+      "file": "hard/10_2025/07_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Count Ways to Climb Staircase",
+      "topics": ["dynamic-programming", "recursion"]
+    },
+    {
+      "file": "hard/10_2025/08_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Longest Substring with K Distinct Characters",
+      "topics": ["sliding-window", "strings", "hash-table"]
+    },
+    {
+      "file": "hard/10_2025/12_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Longest Absolute File Path",
+      "topics": ["stack", "strings"]
+    },
+    {
+      "file": "hard/10_2025/13_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Maximum Value in Each Sliding Window",
+      "topics": ["sliding-window", "queue"]
+    },
+    {
+      "file": "hard/10_2025/20_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Regular Expression Matching",
+      "topics": ["dynamic-programming", "strings"]
+    },
+    {
+      "file": "hard/10_2025/27_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Detect Currency Arbitrage",
+      "topics": ["graphs"]
+    },
+    {
+      "file": "hard/10_2025/30_10_2025.cpp",
+      "difficulty": "hard",
+      "title": "Sort RGB Array In-Place",
+      "topics": ["sorting", "two-pointers"]
+    },
+    {
+      "file": "hard/11_2025/02_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Count N-Queens Arrangements",
+      "topics": ["backtracking", "recursion"]
+    },
+    {
+      "file": "hard/11_2025/05_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Find Unique Among Triplicates",
+      "topics": ["bit-manipulation", "arrays"]
+    },
+    {
+      "file": "hard/11_2025/07_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Subset Sum to Target",
+      "topics": ["dynamic-programming", "arrays"]
+    },
+    {
+      "file": "hard/11_2025/11_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Longest Palindromic Substring",
+      "topics": ["dynamic-programming", "strings"]
+    },
+    {
+      "file": "hard/11_2025/17_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "LRU Cache Implementation",
+      "topics": ["hash-table", "linked-lists"]
+    },
+    {
+      "file": "hard/11_2025/19_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Sudoku Solver",
+      "topics": ["backtracking", "matrix"]
+    },
+    {
+      "file": "hard/11_2025/24_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "File Syncing Algorithm Design",
+      "topics": ["other"]
+    },
+    {
+      "file": "hard/11_2025/29_11_2025.cpp",
+      "difficulty": "hard",
+      "title": "Count Knight's Tours on Chessboard",
+      "topics": ["backtracking", "recursion"]
+    },
+    {
+      "file": "hard/12_2025/02_12_2025.cpp",
+      "difficulty": "hard",
+      "title": "LFU Cache Implementation",
+      "topics": ["hash-table", "linked-lists"]
+    }
+  ]
+}
